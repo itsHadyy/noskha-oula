@@ -241,14 +241,6 @@
   gap: 20px;
 }
 
-@media (min-width: 560px) {
-  .books-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (min-width: 860px) {
-  .books-grid { grid-template-columns: repeat(4, 1fr); }
-}
-
 /* How it works */
 .how-it-works {
   padding: 80px 24px;
@@ -377,4 +369,9 @@
   font-size: 17px;
   color: var(--color-ink-soft);
   margin-bottom: 32px;
+}
+
+
+@media (max-width: 768px) {
+  .books-grid { grid-template-columns: repeat(1, 1fr); }
 }
