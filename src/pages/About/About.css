@@ -1,0 +1,92 @@
+.about-page { padding-top: 72px; }
+
+.about-hero {
+  padding: 60px 24px 48px;
+  background: var(--gradient-brand-soft);
+  position: relative;
+  text-align: center;
+}
+
+.about-hero__inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+
+.about-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 6vw, 56px);
+  color: var(--color-ink);
+  margin-bottom: 24px;
+}
+
+.about-hero__body {
+  font-size: 17px;
+  color: var(--color-ink-soft);
+  line-height: 1.8;
+}
+
+.about-story {
+  padding: 80px 24px;
+  background: var(--color-surface);
+}
+
+.about-story__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.about-story__title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-ink);
+  margin-bottom: 20px;
+}
+
+.about-story__text {
+  font-size: 17px;
+  color: var(--color-ink-soft);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-team {
+  padding: 80px 24px;
+  background: var(--color-violet-soft);
+}
+
+.about-team__inner { max-width: 1180px; margin: 0 auto; }
+
+.about-team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.about-team-member {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(123,85,229,0.07);
+}
+
+.about-team-member__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.about-team-member__name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--color-ink);
+  margin-bottom: 4px;
+}
+
+.about-team-member__role { font-size: 14px; color: var(--color-ink-soft); }

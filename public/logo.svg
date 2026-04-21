@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="48" viewBox="0 0 240 48">
+  <defs>
+    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#53DBC7"/>
+      <stop offset="100%" stop-color="#7B55E5"/>
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="10" y="4" fill="url(#lg)"/>
+  <text x="20" y="24" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">AN</text>
+  <text x="54" y="20" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#1B1430" dominant-baseline="middle">Al Noskha</text>
+  <text x="54" y="38" font-family="Georgia, serif" font-size="13" fill="#7B55E5" dominant-baseline="middle">Al Oula</text>
+</svg>

@@ -1,0 +1,124 @@
+.game-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-stroke);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 70px -20px rgba(123, 85, 229, 0.32);
+}
+
+@media (min-width: 860px) {
+  .game-card {
+    flex-direction: row;
+    min-height: 380px;
+  }
+}
+
+.game-card__artwork {
+  position: relative;
+  flex-shrink: 0;
+  background: var(--gradient-brand-soft);
+  overflow: hidden;
+}
+
+@media (min-width: 860px) {
+  .game-card__artwork {
+    width: 42%;
+  }
+}
+
+.game-card__cover {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+@media (min-width: 860px) {
+  .game-card__cover {
+    height: 100%;
+  }
+}
+
+.game-card:hover .game-card__cover {
+  transform: scale(1.04);
+}
+
+.game-card__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--color-violet);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.game-card__body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.game-card__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-mint);
+}
+
+.game-card__title {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 4vw, 36px);
+  color: var(--color-ink);
+  line-height: 1.2;
+}
+
+.game-card__tagline {
+  font-size: 16px;
+  color: var(--color-ink-soft);
+  line-height: 1.6;
+}
+
+.game-card__meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.game-card__meta-item {
+  font-size: 13px;
+  color: var(--color-ink-soft);
+  background: var(--color-stroke);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.game-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--color-violet);
+  font-size: 15px;
+  cursor: pointer;
+  transition: gap 0.2s ease;
+}
+
+.game-card__cta:hover {
+  gap: 14px;
+}

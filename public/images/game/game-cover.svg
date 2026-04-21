@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="380" viewBox="0 0 500 380">
+  <defs>
+    <linearGradient id="gbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#53DBC7"/>
+      <stop offset="100%" stop-color="#7B55E5"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="380" rx="24" fill="url(#gbg)"/>
+
+  <!-- Grid of 4 icons -->
+  <!-- Brain (top-left) -->
+  <rect x="60" y="60" width="160" height="130" rx="20" fill="rgba(255,255,255,0.15)"/>
+  <text x="140" y="140" font-size="56" text-anchor="middle" dominant-baseline="middle">🧠</text>
+  <text x="140" y="168" font-family="Georgia, serif" font-size="13" fill="white" text-anchor="middle" opacity="0.8">Think</text>
+
+  <!-- Heart (top-right) -->
+  <rect x="280" y="60" width="160" height="130" rx="20" fill="rgba(255,255,255,0.15)"/>
+  <text x="360" y="140" font-size="56" text-anchor="middle" dominant-baseline="middle">❤️</text>
+  <text x="360" y="168" font-family="Georgia, serif" font-size="13" fill="white" text-anchor="middle" opacity="0.8">Feel</text>
+
+  <!-- Star (bottom-left) -->
+  <rect x="60" y="210" width="160" height="130" rx="20" fill="rgba(255,255,255,0.15)"/>
+  <text x="140" y="285" font-size="56" text-anchor="middle" dominant-baseline="middle">⭐</text>
+  <text x="140" y="318" font-family="Georgia, serif" font-size="13" fill="white" text-anchor="middle" opacity="0.8">Imagine</text>
+
+  <!-- Book (bottom-right) -->
+  <rect x="280" y="210" width="160" height="130" rx="20" fill="rgba(255,255,255,0.15)"/>
+  <text x="360" y="285" font-size="56" text-anchor="middle" dominant-baseline="middle">📖</text>
+  <text x="360" y="318" font-family="Georgia, serif" font-size="13" fill="white" text-anchor="middle" opacity="0.8">Learn</text>
+
+  <!-- Title -->
+  <text x="250" y="355" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">Wonder Words</text>
+</svg>

@@ -1,0 +1,122 @@
+.test-page { padding-top: 72px; }
+
+/* Test Picker */
+.test-picker {
+  min-height: 100vh;
+  padding: 60px 24px 80px;
+  background: var(--gradient-brand-soft);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-picker__inner {
+  max-width: 860px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.test-picker__title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 6vw, 56px);
+  color: var(--color-ink);
+  margin-bottom: 12px;
+}
+
+.test-picker__sub {
+  font-size: 17px;
+  color: var(--color-ink-soft);
+  margin-bottom: 48px;
+}
+
+.test-picker__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 560px) {
+  .test-picker__cards { flex-direction: row; }
+}
+
+/* Test Flow */
+.test-flow {
+  min-height: 100vh;
+  padding: 40px 24px 80px;
+  background: var(--gradient-brand-soft);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-flow__inner {
+  max-width: 760px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section transition card */
+.section-transition {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.section-transition__emoji { font-size: 56px; margin-bottom: 16px; }
+
+.section-transition__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-violet);
+  margin-bottom: 8px;
+}
+
+.section-transition__title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-ink);
+  margin-bottom: 12px;
+}
+
+.section-transition__sub { font-size: 15px; color: var(--color-ink-soft); }
+
+/* Results */
+.test-results {
+  min-height: 100vh;
+  padding: 60px 24px 80px;
+  background: var(--gradient-brand-soft);
+  position: relative;
+}
+
+.test-results__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.test-results__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.test-results__title {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 5vw, 48px);
+  color: var(--color-ink);
+  margin-bottom: 8px;
+}
+
+.test-results__sub { font-size: 17px; color: var(--color-ink-soft); }

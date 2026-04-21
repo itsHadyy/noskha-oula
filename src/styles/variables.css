@@ -1,0 +1,26 @@
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-mint: #53DBC7;
+  --color-violet: #7B55E5;
+  --color-mint-soft: #E6FAF6;
+  --color-violet-soft: #EFE9FD;
+  --color-ink: #1B1430;
+  --color-ink-soft: #5A5470;
+  --color-stroke: #EFEAF7;
+  --gradient-brand: linear-gradient(135deg, #53DBC7 0%, #7B55E5 100%);
+  --gradient-brand-soft: linear-gradient(135deg, #E6FAF6 0%, #EFE9FD 100%);
+  --shadow-soft: 0 20px 60px -20px rgba(123, 85, 229, 0.25);
+  --shadow-pop: 0 10px 30px -10px rgba(83, 219, 199, 0.45);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-pill: 999px;
+
+  --bp-sm: 560px;
+  --bp-md: 860px;
+  --bp-lg: 1180px;
+
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
