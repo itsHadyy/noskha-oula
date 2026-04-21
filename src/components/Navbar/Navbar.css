@@ -16,7 +16,7 @@
 }
 
 .navbar__inner {
-  max-width: 1180px;
+  width: 50%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -33,14 +33,14 @@
 }
 
 .navbar__logo-img {
-  height: 36px;
+  height: 66px;
   width: auto;
 }
 
 .navbar__logo-text {
   font-family: var(--font-heading);
   font-size: 18px;
-  color: var(--color-ink);
+  color: var(--gradient-brand);
   line-height: 1.2;
   display: none;
 }

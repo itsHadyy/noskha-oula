@@ -49,8 +49,8 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`} role="navigation" aria-label="Main navigation">
         <div className="navbar__inner">
           <Link to="/home" className="navbar__logo" aria-label="Al Noskha Al Oula home">
-            <img src="/logo-mark.svg" alt="" className="navbar__logo-img" width="36" height="36" />
-            <span className="navbar__logo-text">Al Noskha Al Oula</span>
+            <img src="/logo-mark.png" alt="" className="navbar__logo-img" width="36" height="36" />
+            {/* <span className="navbar__logo-text">Al Noskha Al Oula</span> */}
           </Link>
 
           <div className="navbar__nav">

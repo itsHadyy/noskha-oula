@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar/Navbar'
@@ -19,20 +19,27 @@ const PAGES_WITH_FOOTER = ['/home', '/books', '/game', '/about']
 
 export default function App() {
   const location = useLocation()
-  const isSplash = location.pathname === '/'
-  const splashSeen = sessionStorage.getItem('splashSeen')
+  const [showSplash, setShowSplash] = useState(true)
+  const [isSplashFading, setIsSplashFading] = useState(false)
   const showFooter = PAGES_WITH_FOOTER.some(p => location.pathname.startsWith(p))
 
-  if (isSplash) {
-    return splashSeen ? <Navigate to="/home" replace /> : <SplashScreen />
-  }
+  useEffect(() => {
+    const fadeTimer = setTimeout(() => setIsSplashFading(true), 1700)
+    const hideTimer = setTimeout(() => setShowSplash(false), 2200)
+    return () => {
+      clearTimeout(fadeTimer)
+      clearTimeout(hideTimer)
+    }
+  }, [])
 
   return (
     <>
+      {showSplash && <SplashScreen isFading={isSplashFading} />}
       <Navbar />
       <AnimatePresence mode="wait">
         <Suspense fallback={<div style={{ minHeight: '100vh', background: 'var(--gradient-brand-soft)' }} />}>
           <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
             <Route path="/books" element={<Books />} />
             <Route path="/books/:bookId" element={<BookDetail />} />
