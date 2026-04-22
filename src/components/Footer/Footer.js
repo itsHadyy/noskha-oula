@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <span>© {new Date().getFullYear()} Al Noskha Al Oula. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Al Noskha Al Oula. <a href="https://byhady.com" target="_blank" rel="noopener noreferrer">All rights reserved | HK</a></span>
           <span>Made with care for curious families.</span>
         </div>
       </div>

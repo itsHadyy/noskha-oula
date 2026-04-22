@@ -126,3 +126,31 @@
 
 .question-card__back:hover { color: var(--color-ink); }
 .question-card__back:disabled { opacity: 0; pointer-events: none; }
+
+@media (max-width: 768px) {
+  .question-card {
+    padding: 24px 16px;
+    border-radius: 22px;
+  }
+
+  .question-card__section {
+    margin-bottom: 14px;
+  }
+
+  .question-card__progress,
+  .question-card__text {
+    margin-bottom: 20px;
+  }
+
+  .question-card__option {
+    padding: 12px 14px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .question-card__option-letter {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}

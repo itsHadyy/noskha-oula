@@ -55,9 +55,37 @@
 
 .books-page-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 
 @media (min-width: 560px) { .books-page-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 860px) { .books-page-grid { grid-template-columns: repeat(3, 1fr); } }
+
+@media (max-width: 768px) {
+  .books-page {
+    padding-top: 82px;
+  }
+
+  .books-hero {
+    padding: 40px 16px 30px;
+  }
+
+  .books-hero__sub {
+    font-size: 15px;
+  }
+
+  .books-filters {
+    padding: 20px 16px 0;
+    gap: 8px;
+  }
+
+  .books-filter-chip {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .books-grid-section {
+    padding: 28px 16px 56px;
+  }
+}

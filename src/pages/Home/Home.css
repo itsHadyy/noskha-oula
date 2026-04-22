@@ -89,7 +89,7 @@
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 24px;
   text-align: center;
 }
@@ -173,7 +173,7 @@
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 12px solid rgba(255,255,255,0.3);
+  /* border: 12px solid rgba(255,255,255,0.3); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,7 +237,7 @@
 
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -336,6 +336,8 @@
 }
 
 @media (min-width: 560px) {
+  .stats__inner { grid-template-columns: repeat(3, 1fr); }
+  .books-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -373,5 +375,74 @@
 
 
 @media (max-width: 768px) {
-  .books-grid { grid-template-columns: repeat(1, 1fr); }
+  .hero {
+    min-height: auto;
+    padding: 104px 16px 52px;
+  }
+
+  .hero__inner {
+    gap: 28px;
+  }
+
+  .hero__body {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero__ctas {
+    gap: 10px;
+  }
+
+  .stats {
+    padding: 40px 16px;
+  }
+
+  .test-cta,
+  .games-section,
+  .books-section,
+  .how-it-works,
+  .testimonials-section,
+  .footer-cta {
+    padding: 52px 16px;
+  }
+
+  .test-cta__card {
+    padding: 28px 20px;
+    border-radius: 24px;
+    gap: 16px;
+  }
+
+  .test-cta__sub,
+  .footer-cta__sub {
+    font-size: 15px;
+  }
+
+  .test-cta__ring {
+    width: 120px;
+    height: 120px;
+    border-width: 8px;
+    font-size: 40px;
+  }
+
+  .books-section__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .how-it-works__steps {
+    gap: 24px;
+  }
+
+  .how-step__number {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+}
+
+.btn--primary{
+  background: #fff !important;
+  color: var(--color-violet) !important;
 }

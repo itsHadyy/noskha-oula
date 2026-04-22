@@ -124,10 +124,10 @@ export default function Home() {
               <p className="test-cta__sub">20 questions. 4 sections. One perfectly matched book recommendation.</p>
             </div>
             <div className="test-cta__visual">
-              <div className="test-cta__ring">📖</div>
+              <div className="test-cta__ring"><img src='/logo-mark02.png' alt='logo' /></div>
             </div>
             <Link to="/test">
-              <Button variant="primary" size="lg" className="test-cta__btn">Start the Test →</Button>
+              <Button variant="primary" size="lg" className="btn btn--primary btn--sm">Start the Test →</Button>
             </Link>
           </div>
         </section>

@@ -65,7 +65,7 @@
 
 .about-team__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 16px;
 }
@@ -109,4 +109,57 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+}
+
+@media (min-width: 560px) {
+  .about-team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-team__grid .about-team-member:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 320px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-team__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 82px;
+  }
+
+  .about-hero {
+    padding: 40px 16px 32px;
+  }
+
+  .about-hero__body,
+  .about-story__text {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .about-story,
+  .about-team {
+    padding: 52px 16px;
+  }
+
+  .about-story__title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .about-team-member {
+    padding: 24px 18px;
+  }
+
+  .about-team-member__avatar {
+    width: 96px;
+    height: 96px;
+  }
 }

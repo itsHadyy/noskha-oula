@@ -39,3 +39,13 @@
 .section-header--left .section-header__subtitle {
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 34px;
+  }
+
+  .section-header__subtitle {
+    font-size: 15px;
+  }
+}

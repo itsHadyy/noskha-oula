@@ -130,6 +130,60 @@
 
 .book-detail__also-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
+}
+
+@media (min-width: 560px) {
+  .book-detail__also-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .book-detail {
+    padding-top: 82px;
+  }
+
+  .book-detail__inner {
+    padding: 32px 16px 44px;
+    gap: 24px;
+  }
+
+  .book-detail__cover {
+    box-shadow: 10px 10px 0 var(--color-violet-soft), var(--shadow-soft);
+    transform: none;
+  }
+
+  .book-detail__subtitle {
+    font-size: 16px;
+  }
+
+  .book-detail__price {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .book-detail__ctas {
+    margin-bottom: 28px;
+  }
+
+  .book-detail__desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .book-detail__detail-row {
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 14px;
+  }
+
+  .book-detail__detail-key {
+    width: auto;
+  }
+
+  .book-detail__also {
+    padding: 48px 16px;
+  }
 }

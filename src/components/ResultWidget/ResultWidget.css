@@ -82,3 +82,22 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .result-widget {
+    gap: 24px;
+  }
+
+  .result-widget__ring-wrap {
+    width: 180px;
+    height: 180px;
+  }
+
+  .result-widget__percentage {
+    font-size: 38px;
+  }
+
+  .result-widget__archetype {
+    font-size: 26px;
+  }
+}
