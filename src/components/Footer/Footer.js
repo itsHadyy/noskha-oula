@@ -8,8 +8,7 @@ export default function Footer() {
         <div className="footer__grid">
           <div>
             <Link to="/home" className="footer__brand-logo" aria-label="Al Noskha Al Oula home">
-              <img src="/logo-mark.svg" alt="" className="footer__brand-logo-img" width="32" height="32" />
-              <span className="footer__brand-name">Al Noskha Al Oula</span>
+              <img src="/logo-splash02.png" alt="" className="footer__brand-logo-img" width="100" height="100" />
             </Link>
             <p className="footer__brand-desc">
               Books that raise bright hearts. Helping parents and children find the stories that match who they are.
