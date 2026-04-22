@@ -94,7 +94,7 @@
   text-align: center;
 }
 
-.stats__item {}
+/* .stats__item {} */
 
 .stats__number {
   font-family: var(--font-heading);
