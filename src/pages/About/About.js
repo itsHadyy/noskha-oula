@@ -6,9 +6,19 @@ import { useScrollTop } from '../../hooks/useScrollTop'
 import './About.css'
 
 const team = [
-  { initials: 'LS', name: 'Layla Samir', role: 'Founder & Author' },
-  { initials: 'RK', name: 'Dr. Rania Khalil', role: 'Child Psychologist' },
-  { initials: 'OH', name: 'Omar Hafez', role: 'Creative Director' },
+  { img: 'SalmaKamel.png', name: 'Salma Kamel'},
+  { img: 'Haya.jpg', name: 'Haya Abdel-Wahab'},
+  { img: 'HaidyHossam.png', name: 'Haidy Hossam'},
+  { img: 'AyaAyman.png', name: 'Aya M. Ayman'},
+  { img: 'MalakSalman.png', name: 'Malak O. Salman'},
+  { img: 'JumanaKhaled.png', name: 'Jumana Khaled'},
+  { img: 'Kareem.png', name: 'Kareem El-Gamal'},
+  { img: 'ReemHamza.png', name: 'Reem Hamza'},
+  { img: 'Fedaa.png', name: 'Fedaa A. Elgafary'},
+  { img: 'MennaYasser.png', name: 'Menna Yasser'},
+  { img: 'JamilaHassan.jpg', name: 'Jamila Hassan'},
+  { img: 'LydiaOssama.png', name: 'Lydia Ossama'},
+  { img: 'SondosMedhat.jpg', name: 'Sondos Medhat'},
 ]
 
 export default function About() {
@@ -60,7 +70,9 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.4 }}
                 >
-                  <div className="about-team-member__avatar">{member.initials}</div>
+                  <div className="about-team-member__avatar">
+                    <img src={`/images/team/${member.img}`} alt={member.name} className="about-team-member__photo" />
+                  </div>
                   <h3 className="about-team-member__name">{member.name}</h3>
                   <p className="about-team-member__role">{member.role}</p>
                 </motion.div>
