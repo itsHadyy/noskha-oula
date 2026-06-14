@@ -239,6 +239,12 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  align-items: stretch;
+}
+
+.books-grid > *,
+.books-grid > * > * {
+  height: 100%;
 }
 
 /* How it works */
@@ -342,7 +348,12 @@
 }
 
 @media (min-width: 860px) {
+  .books-grid { grid-template-columns: repeat(3, 1fr); }
   .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1100px) {
+  .books-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 /* Footer CTA band */

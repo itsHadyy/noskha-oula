@@ -13,6 +13,7 @@ const TestPicker = lazy(() => import('./pages/Test/TestPicker'))
 const TestFlow = lazy(() => import('./pages/Test/TestFlow'))
 const TestResults = lazy(() => import('./pages/Test/TestResults'))
 const About = lazy(() => import('./pages/About/About'))
+const Cart = lazy(() => import('./pages/Cart/Cart'))
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'))
 
 const PAGES_WITH_FOOTER = ['/home', '/books', '/game', '/about']
@@ -46,9 +47,9 @@ export default function App() {
             <Route path="/game" element={<Game />} />
             <Route path="/test" element={<TestPicker />} />
             <Route path="/test/child" element={<TestFlow type="child" />} />
-            <Route path="/test/parent" element={<TestFlow type="parent" />} />
             <Route path="/test/results" element={<TestResults />} />
             <Route path="/about" element={<About />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

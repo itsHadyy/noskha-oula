@@ -108,7 +108,7 @@ export default function Home() {
         {/* Stats */}
         <section className="stats">
           <div className="stats__inner">
-            <StatItem target={6} label="Books published" />
+            <StatItem target={books.length} label="Books published" />
             <StatItem target={50000} suffix="+" label="Families helped" />
             <StatItem target={98} suffix="%" label="Happy readers" />
           </div>
@@ -121,7 +121,7 @@ export default function Home() {
             <div className="test-cta__text">
               <p className="test-cta__eyebrow">Personality test</p>
               <h2 className="test-cta__headline">Discover the book your child needs in 3 minutes</h2>
-              <p className="test-cta__sub">20 questions. 4 sections. One perfectly matched book recommendation.</p>
+              <p className="test-cta__sub">20 questions. 5 sections. One perfectly matched book recommendation.</p>
             </div>
             <div className="test-cta__visual">
               <div className="test-cta__ring"><img src='/logo-mark02.png' alt='logo' /></div>

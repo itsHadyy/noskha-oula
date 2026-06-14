@@ -7,14 +7,11 @@ import BookCard from '../BookCard/BookCard'
 import './ResultWidget.css'
 
 const archetypeLabels = {
-  explorer: 'The Explorer',
-  storyteller: 'The Storyteller',
-  builder: 'The Builder',
-  dreamer: 'The Dreamer',
-  nurturer: 'The Nurturer',
-  coach: 'The Coach',
-  guide: 'The Guide',
-  companion: 'The Companion',
+  sharing: 'The Helper',
+  emotional_regulation: 'The Calm Explorer',
+  empathy: 'The Empath',
+  patience: 'The Patient Soul',
+  honesty: 'The Honest Heart',
 }
 
 const RADIUS = 94
@@ -68,7 +65,7 @@ export default function ResultWidget({ archetype, percentage, book, onReset }) {
         </svg>
         <div className="result-widget__ring-label">
           <span className="result-widget__percentage">{displayPct}%</span>
-          <span className="result-widget__ring-subtitle">match</span>
+          <span className="result-widget__ring-subtitle">strength</span>
         </div>
       </div>
 

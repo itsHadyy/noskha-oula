@@ -17,6 +17,31 @@
   position: relative;
 }
 
+.book-detail__featured-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: var(--gradient-brand);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(123,85,229,0.3);
+}
+
+.book-detail__view-cart {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-violet);
+  text-decoration: none;
+  align-self: center;
+}
+.book-detail__view-cart:hover { opacity: 0.75; }
+
 .book-detail__cover {
   width: 100%;
   border-radius: var(--radius-md);
@@ -52,6 +77,16 @@
   margin-bottom: 8px;
 }
 
+.book-detail__arabic-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-violet);
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
 .book-detail__subtitle {
   font-size: 18px;
   color: var(--color-ink-soft);
@@ -65,14 +100,13 @@
   margin-bottom: 24px;
 }
 
-.book-detail__price {
-  font-family: var(--font-heading);
-  font-size: 36px;
-  color: var(--color-violet);
-  margin-bottom: 28px;
+.book-detail__ctas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
-
-.book-detail__ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
 
 .book-detail__desc-title {
   font-family: var(--font-heading);
@@ -86,7 +120,7 @@
   font-size: 16px;
   color: var(--color-ink-soft);
   line-height: 1.8;
-  white-space: pre-line;
+  margin-bottom: 16px;
 }
 
 .book-detail__details {
@@ -130,13 +164,18 @@
 
 .book-detail__also-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  align-items: stretch;
 }
 
-@media (min-width: 560px) {
+.book-detail__also-grid > * {
+  height: 100%;
+}
+
+@media (min-width: 860px) {
   .book-detail__also-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

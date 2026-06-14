@@ -15,6 +15,11 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Netlify Forms detection -->
+    <form name="order" netlify hidden>
+      <input name="name" /><input name="email" /><input name="phone" />
+      <input name="address" /><input name="items" /><input name="total" />
+    </form>
     <script type="module" src="/src/index.js"></script>
   </body>
 </html>

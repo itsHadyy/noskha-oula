@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Users, Zap, Heart, Clock, ShieldCheck } from 'lucide-react'
 import PageTransition from '../../components/PageTransition/PageTransition'
 import FloatingShapes from '../../components/FloatingShapes/FloatingShapes'
 import QuestionCard from '../../components/QuestionCard/QuestionCard'
@@ -10,20 +11,22 @@ import { parentTest } from '../../data/testParent'
 import { useScrollTop } from '../../hooks/useScrollTop'
 import './Test.css'
 
+const sectionIconMap = { Users, Zap, Heart, Clock, ShieldCheck }
+
+function SectionIcon({ name }) {
+  const Icon = sectionIconMap[name]
+  return Icon ? <Icon size={52} strokeWidth={1.4} color="var(--color-violet)" /> : null
+}
+
 function computeResult(testData, answers) {
   const archetypes = testData.archetypes
   const scores = Object.fromEntries(archetypes.map(a => [a, 0]))
-  const maxScores = Object.fromEntries(archetypes.map(a => [a, 0]))
+  const sectionQuestionCounts = Object.fromEntries(
+    testData.sections.map(s => [s.id, s.questions.length])
+  )
 
   testData.sections.forEach(section => {
     section.questions.forEach(q => {
-      q.options.forEach(opt => {
-        archetypes.forEach(a => {
-          if ((opt.weights[a] || 0) > (maxScores[a] || 0)) {
-            maxScores[a] = opt.weights[a] || 0
-          }
-        })
-      })
       const answerIdx = answers[q.id]
       if (answerIdx !== undefined) {
         const chosen = q.options[answerIdx]
@@ -35,8 +38,8 @@ function computeResult(testData, answers) {
   })
 
   const winner = archetypes.reduce((best, a) => scores[a] > scores[best] ? a : best, archetypes[0])
-  const totalQuestions = testData.sections.reduce((s, sec) => s + sec.questions.length, 0)
-  const maxPossible = totalQuestions * 3
+  const winnerSectionCount = sectionQuestionCounts[winner] ?? 4
+  const maxPossible = winnerSectionCount * 3
   const pct = Math.round((scores[winner] / maxPossible) * 100)
   return { archetype: winner, percentage: Math.min(pct, 99) }
 }
@@ -119,7 +122,9 @@ export default function TestFlow({ type }) {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.35 }}
                 >
-                  <div className="section-transition__emoji">{nextSection.sectionEmoji}</div>
+                  <div className="section-transition__emoji">
+                    <SectionIcon name={nextSection.sectionEmoji} />
+                  </div>
                   <p className="section-transition__label">Next up</p>
                   <h2 className="section-transition__title">{nextSection.sectionTitle}</h2>
                   <p className="section-transition__sub">5 more questions — you're doing great!</p>

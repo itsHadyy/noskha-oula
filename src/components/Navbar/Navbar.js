@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ShoppingCart } from 'lucide-react'
 import Button from '../Button/Button'
+import { useCart } from '../../context/CartContext'
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
 import './Navbar.css'
 
@@ -18,6 +20,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   const menuRef = useRef(null)
+  const { count } = useCart()
 
   useLockBodyScroll(menuOpen)
 
@@ -73,6 +76,20 @@ export default function Navbar() {
           </div>
 
           <div className="navbar__cta">
+            <Link to="/cart" className="navbar__cart" aria-label={`Cart (${count} items)`}>
+              <ShoppingCart size={20} strokeWidth={1.8} />
+              {count > 0 && (
+                <motion.span
+                  key={count}
+                  className="navbar__cart-badge"
+                  initial={{ scale: 0.5 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: 'spring', stiffness: 500, damping: 20 }}
+                >
+                  {count}
+                </motion.span>
+              )}
+            </Link>
             <Link to="/test">
               <Button variant="primary" size="sm">Take the Test</Button>
             </Link>

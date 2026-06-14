@@ -20,7 +20,7 @@ export default function Footer() {
             <nav className="footer__links" aria-label="Explore navigation">
               <Link to="/home" className="footer__link">Home</Link>
               <Link to="/books" className="footer__link">All Books</Link>
-              <Link to="/game" className="footer__link">Wonder Words Game</Link>
+              <Link to="/game" className="footer__link">Inside Me Game</Link>
               <Link to="/test" className="footer__link">Take the Test</Link>
             </nav>
           </div>

@@ -1,10 +1,17 @@
 import { memo, useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, Users, Zap, Heart, Clock, ShieldCheck } from 'lucide-react'
 import ProgressBar from '../ProgressBar/ProgressBar'
 import './QuestionCard.css'
 
 const letters = ['A', 'B', 'C', 'D']
+
+const sectionIconMap = { Users, Zap, Heart, Clock, ShieldCheck }
+
+function SectionIcon({ name, size = 16 }) {
+  const Icon = sectionIconMap[name]
+  return Icon ? <Icon size={size} strokeWidth={1.8} /> : null
+}
 
 const QuestionCard = memo(function QuestionCard({
   question,
@@ -40,7 +47,7 @@ const QuestionCard = memo(function QuestionCard({
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="question-card__section">
-          {sectionEmoji} {sectionTitle}
+          <SectionIcon name={sectionEmoji} size={14} /> {sectionTitle}
         </p>
 
         <div className="question-card__progress">

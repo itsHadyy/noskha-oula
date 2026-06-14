@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import PageTransition from '../../components/PageTransition/PageTransition'
 import FloatingShapes from '../../components/FloatingShapes/FloatingShapes'
@@ -7,11 +6,8 @@ import { books } from '../../data/books'
 import { useScrollTop } from '../../hooks/useScrollTop'
 import './Books.css'
 
-const filters = ['All', 'Picture Books', 'Middle Grade', 'Parenting']
-
 export default function Books() {
   useScrollTop()
-  const [active, setActive] = useState('All')
 
   return (
     <PageTransition>
@@ -26,18 +22,6 @@ export default function Books() {
             </motion.div>
           </div>
         </section>
-
-        <div className="books-filters">
-          {filters.map(f => (
-            <button
-              key={f}
-              className={`books-filter-chip${active === f ? ' books-filter-chip--active' : ''}`}
-              onClick={() => setActive(f)}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
 
         <div className="books-grid-section">
           <div className="books-page-grid">
